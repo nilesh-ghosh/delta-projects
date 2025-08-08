@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.main_box{
+    background: url("photo.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+.btn_one{
+    font-weight: 700;
+    left: 16px;
+    line-height: 72px;
+    position: absolute;
+}
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s linear;
+}
+.sidebar_menu{
+    position: absolute;
+    height: 100vh;
+    width: 310px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5) ;
+    left: -350px;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .logo{
+    position: absolute;
+    line-height: 50px;
+    width: 100%;
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    left: 20px;
+    padding: 10px 10px;
+}
+.sidebar_menu .btn_two{
+    position: absolute;
+    font-weight: 700;
+    left: 280px;
+    line-height: 45px;
+    opacity: 1;
+    margin-top: 15px;
+}
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .menu{
+    position: absolute;
+    color: white;
+    top: 80px;
+    line-height: 50px;
+}
+.sidebar_menu .menu li{
+    margin-top: 5px;
+    padding: 10px 20px;
+    width: 257px;
+    transition: all 0.25s linear;
+}
+.sidebar_menu .menu i,a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    transition: all 0.3s linear;
+}
+.sidebar_menu .social_media{
+    position: absolute;
+    bottom: 15px;
+    left: 60px;
+}
+.sidebar_menu .social_media i{
+    opacity: 0.5;
+    padding: 3px;
+    transition: all 0.3s linear;
+}
+#check{
+    display:none;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    transform: scale(1.09);
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.09);
+
+}
+.main_box .btn_one i:hover{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.sidebar_menu .btn_two i:hover{
+    color: white;
+    font-size: 30px;
+}
+
+.headline {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white; 
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blinkCursor 0.6s infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+/* Blinking Cursor */
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+#check:checked ~ .sidebar_menu{
+    left: 0;
+}
+
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+
+#check:checked ~ .headline{
+    display: none ;
+}
